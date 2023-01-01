@@ -5,6 +5,8 @@ services:
     build: ./frontend
     ports:
       - 3000:3000
+    volumes:
+      - ./frontend:/app
   api:
     build: ./backend
     ports:
@@ -21,5 +23,4 @@ services:
       - vidly:/data/db
 
 volumes:
-  vidly:  
-
+  vidly:
