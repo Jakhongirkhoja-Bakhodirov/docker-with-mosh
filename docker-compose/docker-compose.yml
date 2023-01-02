@@ -22,6 +22,11 @@ services:
       - 27017:27017
     volumes:
       - vidly:/data/db
+  web-tests:
+    image: docker-compose-web
+    volumes:
+      - ./frontend:/app
+    command: npm test
 
 volumes:
   vidly:
